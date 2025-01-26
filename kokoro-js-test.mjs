@@ -5,6 +5,36 @@ import { promisify } from 'util';
 
 const execAsync = promisify(exec);
 
+// Function to process footnotes in text
+function processFootnotes(text) {
+  // First, collect all footnotes from the bottom of the text
+  const footnoteMap = new Map();
+  
+  // Find footnotes at the end of the text
+  // Look for [n] followed by text until the next [n] or end of text
+  const footnoteRegex = /\[(\d+)\]\s*([^[]+)(?=\[\d+\]|\s*$)/g;
+  
+  let match;
+  while ((match = footnoteRegex.exec(text)) !== null) {
+    const num = match[1];
+    const content = match[2].trim();
+    footnoteMap.set(num, content);
+  }
+
+  // Replace footnote references in the main text
+  // Split at the second occurrence of [1] which starts the footnotes section
+  const firstIndex = text.indexOf('[1]');
+  const secondIndex = text.indexOf('[1]', firstIndex + 1);
+  let mainText = secondIndex > -1 ? text.substring(0, secondIndex) : text;
+
+  mainText = mainText.replace(/\[(\d+)\]/g, (match, num) => {
+    const footnote = footnoteMap.get(num);
+    return footnote ? ` (footnote: ${footnote}) ` : match;
+  });
+
+  return mainText.trim();
+}
+
 // Function to chunk text into segments, preferably at sentence boundaries
 function chunkText(text, maxTokens = 51, maxChars = 250) {
   const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
@@ -56,15 +86,50 @@ function chunkText(text, maxTokens = 51, maxChars = 250) {
 
 async function main() {
   try {
+    // chunking test
+    if (process.argv.includes('--test-chunks')) {
+      const text = await readFile('input.txt', 'utf-8');
+      console.log('Original text:\n', text);
+      
+      const processedText = processFootnotes(text);
+      console.log('\nProcessed text (with footnotes inline):\n', processedText);
+      
+      console.log('\nChunks:');
+      const chunks = chunkText(processedText);
+      chunks.forEach((chunk, index) => {
+        console.log(`\nChunk ${index + 1}/${chunks.length} (${chunk.length} chars):`);
+        console.log(chunk);
+      });
+      return;
+    }
+    // Check if user wants to list voices
+    if (process.argv.includes('--voices')) {
+      const model_id = "onnx-community/Kokoro-82M-ONNX";
+      const tts = await KokoroTTS.from_pretrained(model_id, {
+        dtype: "q8",
+      });
+      console.log('Available voices:');
+      const voices = await tts.list_voices();
+      console.log(voices);
+      return;
+    }
+
     const startTime = Date.now();
     const model_id = "onnx-community/Kokoro-82M-ONNX";
     const tts = await KokoroTTS.from_pretrained(model_id, {
       dtype: "q8", // Options: "fp32", "fp16", "q8", "q4", "q4f16"
     });
 
+    // Get voice from command line argument or use default
+    const selectedVoice = process.argv[2] || "af";
+    console.log(`Using voice: ${selectedVoice}`);
+
     // Read text from input file
     const text = await readFile('input.txt', 'utf-8');
     console.log('Processing text...');
+    
+    // Process footnotes
+    const processedText = processFootnotes(text);
     
     // Split text into chunks
     const chunks = chunkText(text);
@@ -76,7 +141,7 @@ async function main() {
       const chunkStartTime = Date.now();
       process.stdout.write(`Processing chunk ${i + 1}/${chunks.length}... `);
       const audio = await tts.generate(chunks[i], {
-        voice: "af",
+        voice: selectedVoice,
       });
       
       const tempFileName = `chunk_${i}.wav`;

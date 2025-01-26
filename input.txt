@@ -1,13 +1,139 @@
-SEC: Vanguard
+FartStrategy
 
-In late 2020, Vanguard Group decided to lower the fees that it charged some medium-sized 401(k) retirement plans for target-date mutual funds. That’s nice! The reasoning for this change was basically that Vanguard was making too much money on these plans, and it wanted to give some of it back to its customers, so it lowered the fees. Just goodness-of-its-heart type stuff. [6]
+MicroStrategy Inc. is, among other things, a proof of concept. The concept is: “If you buy $100 of Bitcoin and put it in a pot, you can slice the pot into shares and sell them for $200.” (MicroStrategy owns about $49 billion of Bitcoin and has a market capitalization of about $94 billion, because people will buy its shares for more than the value of the underlying Bitcoin.) This is a very appealing concept, because: free money! A “perpetual motion machine,” I sometimes call it: The more shares you sell, the more Bitcoin you can buy, and the more your shares are worth.
 
-You would not think that this would lead to any sort of tax problems for Vanguard’s customers, for at least two reasons:
+I say “you,” but it’s not clear that you can do this. MicroStrategy can do it. Why? What is special about MicroStrategy? I think the answer is some combination of:
 
-    Lowering the fees on a mutual fund is not generally a taxable event? You pay taxes when you buy or sell securities, not when your investment manager lowers its fees.
-    401(k) plans are tax-advantaged, and in particular, even if lowering the fees was generally a taxable event for investors in these funds (it isn’t), people who invested through 401(k) plans would not have any tax liabilities.
+    MicroStrategy was arguably the first convenient pot of Bitcoins that came wrapped in a publicly traded US stock — its Bitcoin strategy predated spot Bitcoin exchange-traded funds, for instance [1]  — so a lot of people who wanted Bitcoin in their brokerage accounts bought MicroStrategy, giving it name recognition and a first-mover advantage.
+    Even now, MicroStrategy has some advantages over other Bitcoin-wrapped-in-stock products, because it is nominally a technology company, not an investment fund. Some investors — index funds, for instance, but also double-levered ETFs — can buy MicroStrategy but not other, purer Bitcoin investment products like ETFs.
+    MicroStrategy has been thoughtful and aggressive about size and structuring, offering lots of convertible bonds to let investors take advantage of its high volatility. [2]
+    MicroStrategy is good at marketing this: Its chief executive officer, Michael Saylor, is a noisy and articulate spokesperson for the strategy. It sizes deals using crypto-y numbers like 21. [3]  It has metrics like “Bitcoin yield” to make investors feel like this makes more sense than it does.
 
-And yet somehow Vanguard messed it up, and its basically nice decision — to lower fees for medium-sized 401(k) customers — got it in trouble with the SEC. On Friday it agreed to pay more than $100 million to settle with the SEC. [7]  
+These answers are not that fun. You don’t want these answers. You want an answer like: “Nothing is special about MicroStrategy. Anyone can do this. Skill and size and incumbency advantages don’t matter; MicroStrategy is a pure proof of a general concept, which is ‘if you put crypto in a pot you can sell the pot for more than the value of the crypto.’ You can do that. Go ahead! Take some free money.”
 
-Honestly it takes some work to mess this up, but Vanguard managed. Here’s how, from the SEC order. Vanguard offered target-date funds [8]  in two different classes, called “Investor” and “Institutional.” The Investor funds were “for investors with assets of less than $100 million, including small- and medium-sized retirement plans and individual investors”; the Institutional funds were “for institutional investors (primarily larger retirement plans) with assets greater than $100 million.” The investments were similar in each class, but the fees were different: “The Investor [funds] had an average expense ratio of 0.14%, and the Institutional [funds] had an expense ratio of 0.09% across all vintages.” You got a volume discount if you invested more than $100 million with Vanguard.
+Or maybe you don’t want that, but lots of people do. Several public companies have dabbled in imitating MicroStrategy, sometimes with decent results; it is possible that my Answer 2 applies to companies generally, not just MicroStrategy. (In fact MicroStrategy promotes this as a general strategy for other companies.) And while the typical trade involves acquiring a pot of Bitcoin, you can try it with other cryptocurrencies too. Here’s a company announcing “a decision to include Bitcoin and Ethereum as treasury reserve assets,” and here’s a Dogecoin one.
 
+But what if you don’t happen to have a public company lying around? Can anyone put crypto in a pot and sell the pot for more than the value of the crypto? I mean, I feel like the answer is “no,” but this is the sort of thing where my intuitions are always wrong, so give it a try if you want. A couple of readers sent me this:
+
+    FartStrategy was created to accumulate as much Fartcoin as possible. Hot air rises, and FartStrategy will ride that hot air to generate value for both Fartcoin and $FSTR holders. …
+
+    FartStrategy is a lighthearted meme token created in the spirit of Fartcoin. Fartcoin, much like Dogecoin, is a meme cryptocurrency with no central team dedicated to increasing its value. Neither Fartcoin nor Dogecoin is designed or intended to be a security, nor do they carry any expectation of profit. Similarly, FartStrategy—functioning as a decentralized and leveraged holding vault for Fartcoin—is also not designed to generate a profit and should be viewed solely as a source of amusement and entertainment. Additionally, FartStrategy does not create any surplus value above the amount of Fartcoin held in its vault, which is itself based purely on the humorous meme value of Fartcoin.
+
+It is a decentralized finance thingy — not a public company, not a stock, not in your brokerage account, just a crypto token — that purports to offer “convertible bonds” and “at-the-money offerings” to raise money to buy Fartcoin, much like MicroStrategy does for Bitcoin. “If the total market cap of $FSTR trades significantly above the total value of its Fartcoin holdings,” it says, it will sell tokens to buy Fartcoin, “thus accelerating the ‘Fartcoin Flywheel.’” One of the readers who sent it to me called it “sublime and transcendent nihilism,” and I can’t really improve on that. 
+Bally’s Chicago
+
+Bally’s Corp. is a publicly traded casino company. [4]  In 2022, it struck a deal to build a big casino resort in downtown Chicago. As part of that deal, Illinois gaming regulators and the city of Chicago imposed various requirements on Bally’s, and one of them is that the casino be 25% owned by women and minorities. [5]  
+
+I suppose it is hard for a publicly traded company to meet that requirement, but here’s how Bally’s is doing it. It will put the Chicago casino project in a separate company — Bally’s Chicago Inc. — which will be 75% owned by Bally’s and 25% owned by women and minorities. And Bally’s Chicago will do a public stock offering to find those female and minority shareholders. Here is the prospectus, from last week. It is unusual! (“No White Men Allowed in Bally’s Chicago Casino Share Offering Promoted by City Officials,” says a local headline.) From the prospectus:
+
+    This offering is only being made to, and all concurrent private placements are being entered into with, individuals and entities that satisfy the Class A Qualification Criteria (as defined herein). ...The Class A Qualification Criteria include, among other criteria, that the person:
+
+    • if an individual, must be a woman;
+
+    • if an individual, must be a Minority, as defined by MCC 2-92-670(n) (see below); or
+
+    • if an entity, must be controlled by women or Minorities.
+
+After the offering, the shares will not be listed, and transfers will only be allowed to investors who meet the same criteria. “The process for placing orders in this offering is different from that used for most public offerings of equity securities,” says the prospectus, and there is a “qualification process” in which Bally’s Chicago “will determine, in our sole discretion, whether you meet the Class A Qualification Criteria.”
+
+There is also an interesting minority-ownership-percentage arbitrage going on here. Bally’s Chicago is offering, roughly speaking, 10,000 shares of stock at $25,000 each. Some of the shares will be sold at full price, but some will be sold at lower prices: some at $5,000, some at $2,500, and 500 shares at $250 each. The way it works is that if you buy a $250 share — called a “Class A-1 Interest” — then Bally’s Chicago lends you the other $24,750, so you are the equity owner on the full $25,000 share. The loan is not recourse to you — technically it is a loan from one part of Bally’s Chicago to another, not to you — so you won’t be on the hook to pay it back. But if Bally’s Chicago succeeds and makes money, you don’t get any of the profits until the loan has been paid back with 11% interest.
+
+As far as I can tell, that means (1) you can put in $250 and (2) Bally’s gets to count that as $25,000 of ownership by women or minorities. In total, Bally’s Chicago is targeting $195 million from this offering, but that will count as $250 million out of its total capitalization of $1 billion, meeting its minority ownership requirements.
+
+I have never seen this before, and it is interesting, but also, uh, awkward timing? I wrote this week:
+
+    What if the US Securities and Exchange Commission never brings another enforcement case? What if it’s like “ahh, go ahead, do all the fraud you want”? What if the only enforcement cases are against BlackRock for doing ESG investing, or against short sellers of Trump Media & Technology Group Corp.? 
+
+Possibly this will be on that list?
+IPO fees
+
+Here are four possible ways for investment bankers to compete for a mandate to lead a company’s initial public offering:
+
+    Say, and demonstrate, that you are good at the job. Explain your credentials as a leading underwriter, mention your deep relationships with key investors, give thoughtful strategic advice about how to position and market the deal. This is fine! It is sometimes hard for this to make an impression. Running an IPO for a popular company is not rocket science, and every bank will have a credentials page showing that it is the top bank.
+    Build a deep personal connection with the company, by doing lots of work for the company in the years leading up to the deal, lending it money, befriending its executives, doing stunts to show how much you love its products, etc. This is fine too, though quite competitive. A lot of bankers are lining up to lend money to, and do stunts for, hot pre-IPO companies.
+    In your pitchbook for the IPO, on the page that says how much money you think the company is worth, write a big number. The company wants to be told a big number! “We think you’re worth $100 billion, pick us” is just a nice pitch, and the company can’t really hold you to it. This seems to work more often than it should.
+    Fees? “We’ll do your IPO for half the price of everyone else”? This one is strongly disfavored in traditional investment banking, and banks often hold the line and try not to discount fees. There is a theory that it looks shabby, that saying “we’ll do your IPO for half price” suggests that you are half as good, that the company’s IPO is too important to haggle over price. But (1) I’m not sure that’s true — how important is the IPO, really? — and (2) for a big enough deal, banks will haggle.
+
+Anyway:
+
+    Chinese banks have been pitching to work on the blockbuster Hong Kong secondary listing of the world’s leading EV battery maker CATL for as little as 0.01 per cent in fees, highlighting cut-throat competition in a once-lucrative listings market where business has significantly slowed.
+
+    CICC and CSC are among the banks lined up for a leading role on the deal, which stands to be one of the biggest listings in Hong Kong in recent years. JPMorgan and Bank of America are also lined up for top roles.
+
+    Two people with knowledge of the matter said CICC’s pitch for a role on the deal had suggested they would be willing to work on it for fees of 0.01 per cent of the capital raised, which could ultimately top $7bn. Two people with knowledge of the matter said CSC had also pitched for a fee at around that level. …
+
+    Bankers said Chinese banks were willing to accept rock-bottom fees on such a major offering as there was little business and the IPO market was yet to recover on the mainland. A director at a European bank who pitched said it was not a surprise to see the cut-throat pitches “given most of their China team onshore has lots of capacity but no deal flows”. 
+
+Unpleasant for the banks!
+XOVR
+
+We talked last month about the demand for SpaceX shares. SpaceX is a private company, and for the most part you can’t buy SpaceX shares. But there are indirect opportunities: Some SpaceX shares have fallen into the hands of special-purpose vehicles, and maybe you will be offered the chance to buy shares in those SPVs, or in second-level SPVs or closed-end funds that invest in those SPVs. You will pay up for that privilege: The supply of publicly available SpaceX shares is low, the demand is high, and people who have those shares will charge you a lot for them. A fund that owns SpaceX will trade at a premium to the underlying SpaceX.
+
+(Obviously there are parallels to the MicroStrategy situation, though not too many. SpaceX shares are fairly hard to get; it is not all that hard to buy Bitcoin. In some ways SpaceX SPVs and MicroStrategy are solving opposite problems: Retail investors can’t get SpaceX, so they buy SPVs at a premium, but some institutional investors have mandates that prevent them from buying Bitcoin, so they buy MicroStrategy stock or convertibles.)
+
+These days the most popular wrapper for a lot of odd assets is an exchange-traded fund, so naturally you will want an ETF that holds SpaceX. But ETFs are not really supposed to trade at a premium: ETF arbitrageurs and the ETF creation/redemption mechanism are supposed to keep the price of the ETF in line with the value of its underlying assets. If there’s a lot of demand for the ETF, more supply is created, which is hard to do with a SpaceX ETF: How do you get more SpaceX shares? But Bloomberg’s Emily Graffeo reports:
+
+    An exchange-traded fund from a relatively unknown shop is catching the attention of online traders and gathering flows after investing in Elon Musk’s SpaceX.
+
+    The ERShares Private-Public Crossover ETF (ticker XOVR) has raked in more than $120 million since buying shares of the private rocket and satellite company in December. That’s the best stretch of flows in its seven-year lifespan, and it’s helped the fund grow its assets to $250 million.
+
+    Major money managers from BlackRock Inc. to Invesco Ltd. are competing to offer investors access to private markets through ETFs. But as of Friday, XOVR is the only US-listed ETF that holds SpaceX, according to CFRA Research, giving smaller investors exposure to one of the hottest private companies. …
+
+People want XOVR, because it owns SpaceX, but it’s an ETF — not a closed-end fund — so arbitrage should keep its share price pretty close to net asset value. How does that work with SpaceX shares, which are not particularly easy to arbitrage? It is not clear. (If you want to create new XOVR shares, do you have to hand in some SpaceX shares? Apparently not.) Bloomberg tells me that XOVR trades at a 0.1% premium to net asset value, which is pretty good, but who knows:
+
+    One hurdle to buying anything illiquid — like shares of private companies — is that it can cause an ETF to trade at a premium or discount to the net asset value, potentially leading to hidden costs for investors. While SpaceX was most recently valued at about $350 billion, after an insider share sale in December, it’s not clear how the fund is valuing shares of the company on a daily basis in order to meet its creations and redemptions.
+
+    As the fund grows, it would need to acquire more SpaceX holdings to avoid diluting the position.
+
+    “If you buy now, you’re diluting the SpaceX position for everybody else who bought in,” said Dave Nadig, an independent ETF analyst. “So if this fund is extraordinarily successful and they’re unable to acquire SpaceX shares, a 9% SpaceX position you thought you were buying into to very quickly can become a 2% SpaceX position.”
+
+Yes, but does that matter? This does not seem like an entirely rational process, and “we have a certain amount of SpaceX” is a good marketing pitch regardless of the amount.
+InfinityPools
+
+For a while, I guess I was making my living by translating crypto stuff into traditional finance terms. Crypto, I often say, is constantly relearning the lessons of traditional finance. But because it is learning those lessons from scratch, by experience, it often uses different words for them, and it can be instructive to say “this crypto thing is basically this traditional finance thing, but louder.” So I would do that from time to time, and it was fun for me.
+
+And then there was a big crypto winter and I was like “la la la I will never have to think about this again.” But I was obviously wrong, Bitcoin is hitting all-time highs, crypto is a “national priority” now, I’m writing about Fartcoin, and I suppose I will be back in the “this crypto thing is like that other thing” business. I’m sorry? I don’t love it either.
+
+Anyway yesterday a reader sent me this:
+
+    InfinityPools is a decentralized exchange that can offer unlimited leverage on any asset, with no liquidations, no counterparty risk & no oracles.
+
+    In order to mitigate liquidation risk, futures exchanges limit the maximum leverage available, the assets that can be traded and position sizes. Furthermore, traders are also subject to liquidation penalties that eat into their expected returns. 
+
+    Leverage is often necessary as investing is only worth a person’s time if the return upside is high enough. InfinityPools found a way to get rid of these constraints and make "good" leverage accessible to everyone.
+
+    Trade on insight, not capital.
+
+Unlimited leverage! You can put in $1, borrow $999, buy $1,000 worth of Ether, and even if Ether falls by 10% you can keep the position open (as long as you keep paying interest on your borrowing). How? Well, here is an explanation from InfinityPools, and here’s one from crypto investor Jonathan Wu on X, and those explanations are good and clear and you can read them to learn how it works. But they’re written in crypto terms and I figured I’d just translate them here. (Though InfinityPools provides its own translation.) 
+
+A lot of crypto trades on decentralized exchanges. The way a decentralized exchange works is that people — ordinary investors, crypto trading firms, whoever; they are called “liquidity providers” or “LPs” — put crypto tokens into smart contracts called “automated market makers,” and then if you want to exchange some crypto token for some other token, you go to the relevant AMM — the one for that token pair — and trade with it. And the AMM trades with you at some formulaically derived price; basically the more of a token you want to buy, the higher the price you will pay for it. 
+
+The people putting their tokens into the AMM smart contract — locking them up to support liquidity — get paid a share of the fees and trading profits that the AMM generates. This is called “yield,” in the crypto world. But one more traditional-finance way to think about it is that it is option premium. If you lock up money in an AMM, what you are doing is saying “I will sell you one Ether for $3,300, or two for $3,500, or three for $3,800,” or whatever, some schedule of formulaic demand. You are effectively writing options on some token, at different prices. And you expect to get paid some premium — the yield — for writing those options. And then if Ether goes up to $6,000, you will sell all of the Ether that you locked up in the AMM, and you will regret it (your trading losses will be bigger than your yield), but maybe you won’t regret it that much, because in crypto, charmingly, this risk is called “impermanent loss” so maybe you will think it’s impermanent.
+
+And InfinityPools is basically: You can buy an asset (say, Ether), and you can also buy put options on that asset, so you have no risk of liquidation. Put in $1, borrow $999, buy $1,000 of Ether, buy a put option on Ether struck at $999, and your total package — your Ether plus the put option — is always worth at least $999, so you are never underwater on your loan. InfinityPools describes this as “paying some interest upfront (premium),” and Wu notes: “LPs should also earn significantly higher yields (in theory) than providing for spot AMMs, given out of range liquidity is constantly being borrowed to protect levered positions.” “Out of range liquidity is constantly being borrowed” means “you are buying puts, and paying for them.”
+
+Does this — “borrow money to buy a stock, and buy puts so that you never get a margin call” — exist in traditional finance? Oh sure! There are two relevant forms:
+
+    There is a reasonably standard trade called a “funded collar,” where a bank lends you the money to buy stock and also sells you a put against the stock. The trade guarantees that the bank will get paid back — at maturity, either (1) the stock will be worth more than the loan, and you can sell it to pay back the loan, or (2) it will be worth less, you will exercise the put, the bank will buy the stock at the put price and the put price will pay back the loan [6] — and so there are no margin calls. As the name “collar” suggests, ordinarily in this trade you will sell the bank a call option, giving up some upside in order to make the put option cheaper, but I suppose if you wanted to you could just pay for the put outright.
+    This is a call option. “Stock plus a put” has the payoff profile of a call option; my example trade is equivalent to buying a call option on $1,000 of Ether, struck at $999. Obviously when you buy a call option you pay a premium, which you lose if the call finishes out-of-the-money; that’s true here too. [7]  It is possible that “unlimited leverage with no liquidation” is more psychologically appealing than “buy a call option.”
+
+Also the Bally’s Chicago $250 share is essentially the same thing, though that one is less standard.
+Things happen
+
+“Portfolio trades, in which large baskets of debt are bought and sold in one swoop, accounted for about 9% of total US corporate bond volume in 2024.” European banks to reward investors with bumper €123bn in payouts. OpenAI’s Stargate Deal Heralds Shift Away From Microsoft. Crop Trader Declares Force Majeure Along US Gulf During Rare Southern Snow. Crypto’s Richest Man CZ Turns VC Firm Into Giant Family Office. Crypto executive freed after kidnap in France. “Top Republicans ... have even calculated that they could generate $20 billion by raising taxes on people who can use a free gym at the office.” A ‘National Tragedy’ in India: Popcorn Is Taxed Three Ways. “American ambulators walked faster and schmoozed less than they used to.”
+
+If you'd like to get Money Stuff in handy email form, right in your inbox, please subscribe at this link. Or you can subscribe to Money Stuff and other great Bloomberg newsletters here. Thanks!
+
+[1] The Grayscale Bitcoin Trust was way ahead of MicroStrategy, but that was, for various reasons, not a convenient pot for everyone. (It is now an ETF.) For a long time it did trade at a premium, though.
+
+[2] The Wall Street Journal has a story today about MicroStrategy convertible investors. Some of them are convertible arbitrageurs, but others are long-only investors, essentially traditional asset managers who want downside-protected Bitcoin exposure: “They believe in bitcoin, and these investments are slightly safer than buying the coin or MicroStrategy shares.” There might be a limit there: “‘The market is still digesting the crypto-converts wave that came in the fourth quarter,’ said Bryan Goldstein, who runs the convertible practice at the advisory firm Matthews South. ‘I don’t think that it will continue with the same intensity, but there is definitely still a bid in the market for appropriately priced deals.’” Disclosure: Goldstein and I worked together doing convertibles at Goldman Sachs Group Inc.
+
+[3] Please take a moment to imagine how stupid I felt typing that sentence. And it gets worse!
+
+[4] Not especially relevant to anything else, but Bally’s is in the middle of a going-private-ish transaction in which it will merge with another casino company and Standard General LP, its biggest shareholder, will acquire majority control of the combined company. Some public stock will remain outstanding, though.
+
+[5] See pages 17 and 18 of the Bally’s Chicago S-1: “The Illinois Gambling Act requires that, as an applicant for an owner’s license to operate the casino, we provide evidence of our best efforts to attain certain ownership goals and that the Illinois Gaming Board take our ownership into account when determining whether to grant that license. Consistent with that requirement, our Host Community Agreement with the City of Chicago requires that 25% of Bally’s Chicago OpCo’s equity must be owned by persons that have satisfied the Class A Qualification Criteria.”
+
+[6] In this case the bank will have a loss *on the put*, but it was presumably hedging the put so it's fine.
+
+[7] Though they have more structuring, including a “revolving loan” where you can “get a refund on ‘unspent’ premium” if you exercise early. Roughly “asset plus installment puts.”
