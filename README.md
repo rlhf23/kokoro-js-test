@@ -1,5 +1,7 @@
 # Kokoro TTS Processor
 
+<https://huggingface.co/onnx-community/Kokoro-82M-ONNX>
+
 ## Node.js Setup
 
 1. Install dependencies:
