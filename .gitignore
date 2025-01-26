@@ -43,3 +43,4 @@ logs/
 *.seed
 *.pid.lock
 *.wav
+input.txt
