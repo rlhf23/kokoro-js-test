@@ -1,0 +1,13 @@
+SEC: Vanguard
+
+In late 2020, Vanguard Group decided to lower the fees that it charged some medium-sized 401(k) retirement plans for target-date mutual funds. That’s nice! The reasoning for this change was basically that Vanguard was making too much money on these plans, and it wanted to give some of it back to its customers, so it lowered the fees. Just goodness-of-its-heart type stuff. [6]
+
+You would not think that this would lead to any sort of tax problems for Vanguard’s customers, for at least two reasons:
+
+    Lowering the fees on a mutual fund is not generally a taxable event? You pay taxes when you buy or sell securities, not when your investment manager lowers its fees.
+    401(k) plans are tax-advantaged, and in particular, even if lowering the fees was generally a taxable event for investors in these funds (it isn’t), people who invested through 401(k) plans would not have any tax liabilities.
+
+And yet somehow Vanguard messed it up, and its basically nice decision — to lower fees for medium-sized 401(k) customers — got it in trouble with the SEC. On Friday it agreed to pay more than $100 million to settle with the SEC. [7]  
+
+Honestly it takes some work to mess this up, but Vanguard managed. Here’s how, from the SEC order. Vanguard offered target-date funds [8]  in two different classes, called “Investor” and “Institutional.” The Investor funds were “for investors with assets of less than $100 million, including small- and medium-sized retirement plans and individual investors”; the Institutional funds were “for institutional investors (primarily larger retirement plans) with assets greater than $100 million.” The investments were similar in each class, but the fees were different: “The Investor [funds] had an average expense ratio of 0.14%, and the Institutional [funds] had an expense ratio of 0.09% across all vintages.” You got a volume discount if you invested more than $100 million with Vanguard.
+
