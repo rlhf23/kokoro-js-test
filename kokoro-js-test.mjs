@@ -84,45 +84,24 @@ function chunkText(text, maxTokens = 51, maxChars = 250) {
   return chunks;
 }
 
+async function initializeTTS(dtype = "fp32") {
+  const model_id = "onnx-community/Kokoro-82M-ONNX";
+  return await KokoroTTS.from_pretrained(model_id, { dtype });
+}
+
+async function displayChunks(text, processedText, chunks) {
+  console.log('Original text:\n', text);
+  console.log('\nProcessed text (with footnotes inline):\n', processedText);
+  console.log('\nChunks:');
+  chunks.forEach((chunk, index) => {
+    console.log(`\nChunk ${index + 1}/${chunks.length} (${chunk.length} chars):`);
+    console.log(chunk);
+  });
+}
+
 async function main() {
   try {
-    // chunking test
-    if (process.argv.includes('--test-chunks')) {
-      const text = await readFile('input.txt', 'utf-8');
-      console.log('Original text:\n', text);
-      
-      const processedText = processFootnotes(text);
-      console.log('\nProcessed text (with footnotes inline):\n', processedText);
-      
-      console.log('\nChunks:');
-      const chunks = chunkText(processedText);
-      chunks.forEach((chunk, index) => {
-        console.log(`\nChunk ${index + 1}/${chunks.length} (${chunk.length} chars):`);
-        console.log(chunk);
-      });
-      return;
-    }
-    // Check if user wants to list voices
-    if (process.argv.includes('--voices')) {
-      const model_id = "onnx-community/Kokoro-82M-ONNX";
-      const tts = await KokoroTTS.from_pretrained(model_id, {
-        dtype: "q8",
-      });
-      console.log('Available voices:');
-      const voices = await tts.list_voices();
-      console.log(voices);
-      return;
-    }
-
     const startTime = Date.now();
-    const model_id = "onnx-community/Kokoro-82M-ONNX";
-    const tts = await KokoroTTS.from_pretrained(model_id, {
-      dtype: "q8", // Options: "fp32", "fp16", "q8", "q4", "q4f16"
-    });
-
-    // Get voice from command line argument or use default
-    const selectedVoice = process.argv[2] || "af";
-    console.log(`Using voice: ${selectedVoice}`);
 
     // Read text from input file
     const text = await readFile('input.txt', 'utf-8');
@@ -132,14 +111,42 @@ async function main() {
     const processedText = processFootnotes(text);
     
     // Split text into chunks
-    const chunks = chunkText(text);
+    const chunks = chunkText(processedText);
     console.log(`Split into ${chunks.length} chunks`);
+
+    // If testing chunks, display and exit
+    if (process.argv.includes('--test-chunks')) {
+      await displayChunks(text, processedText, chunks);
+      return;
+    }
+
+    // Initialize TTS with appropriate dtype
+    const dtype = process.argv.includes('--voices') ? "q8" : "fp32";
+    const tts = await initializeTTS(dtype);
+
+    // If listing voices, display and exit
+    if (process.argv.includes('--voices')) {
+      console.log('Available voices:');
+      const voices = await tts.list_voices();
+      console.log(voices);
+      return;
+    }
+
+    // Get voice from command line argument or use default
+    const selectedVoice = process.argv[2] || "af";
+    console.log(`Using voice: ${selectedVoice}`);
     
     // Generate audio for each chunk
     const audioFiles = [];
+    let lastChunkDuration = 0;
     for (let i = 0; i < chunks.length; i++) {
       const chunkStartTime = Date.now();
-      process.stdout.write(`Processing chunk ${i + 1}/${chunks.length}... `);
+      
+      // Move cursor to beginning of line and clear to end
+      process.stdout.write('\r\x1b[K');
+      const prevChunkInfo = i > 0 ? `Previous chunk took ${lastChunkDuration.toFixed(2)}s. ` : '';
+      process.stdout.write(`${prevChunkInfo}Processing chunk ${i + 1}/${chunks.length}...`);
+      
       const audio = await tts.generate(chunks[i], {
         voice: selectedVoice,
       });
@@ -148,9 +155,11 @@ async function main() {
       await audio.save(tempFileName);
       audioFiles.push(tempFileName);
       
-      const chunkDuration = (Date.now() - chunkStartTime) / 1000;
-      console.log(`done in ${chunkDuration.toFixed(2)}s`);
+      lastChunkDuration = (Date.now() - chunkStartTime) / 1000;
     }
+    
+    // Final newline and show last chunk duration
+    process.stdout.write(`\nFinal chunk completed in ${lastChunkDuration.toFixed(2)}s\n`);
     
     // Merge audio files
     try {
@@ -165,21 +174,30 @@ async function main() {
         await writeFile('files.txt', fileList);
 
         // Merge multiple chunks using ffmpeg
-        console.log('Merging files:', audioFiles);
+        console.log('Merging files...');
+        // console.log('Merging files:', audioFiles);
         const { stdout, stderr } = await execAsync('ffmpeg -y -f concat -safe 0 -i files.txt -c copy output.wav');
         // if (stderr) console.log('FFmpeg messages:', stderr); // a lot of logs
         await unlink('files.txt'); // Clean up the file list
         console.log('Merged files saved as output.wav');
       }
       
-      // Verify the output file exists and has content
-      const stats = await readFile('output.wav');
-      const sizeInMB = (stats.length / (1024 * 1024)).toFixed(2);
-      const sizeInKB = (stats.length / 1024).toFixed(2);
-      const readableSize = stats.length > 1024 * 1024 
+      // Verify the output file exists, was just created, and has content
+      const { statSync } = await import('fs');
+      const fileStats = statSync('output.wav');
+      const fileCreationTime = fileStats.birthtimeMs;
+      
+      if (fileCreationTime < startTime) {
+        console.warn('\x1b[33mWARNING: Output file appears to be from a previous run!\x1b[0m');
+      }
+      
+      const sizeInMB = (fileStats.size / (1024 * 1024)).toFixed(2);
+      const sizeInKB = (fileStats.size / 1024).toFixed(2);
+      const readableSize = fileStats.size > 1024 * 1024 
         ? `${sizeInMB} MB` 
         : `${sizeInKB} KB`;
       console.log(`Output file size: ${readableSize}`);
+      console.log(`File creation time: ${new Date(fileCreationTime).toLocaleString()}`);
       
       // Clean up temporary files
       await Promise.all(audioFiles.map(file => unlink(file)));
